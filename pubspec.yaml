@@ -1,0 +1,20 @@
+name: hand_vision
+description: HandVision - detección de manos en tiempo real (Flutter Web + MediaPipe Hand Landmarker).
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Sin paquetes de terceros: la interoperabilidad usa dart:js_interop (SDK).
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
