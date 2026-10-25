@@ -27,16 +27,16 @@ class GestureRecognizer {
   static Gesture candidate(Map<Finger, FingerState> f) {
     bool e(Finger x) => f[x] == FingerState.extended;
     bool d(Finger x) => f[x] == FingerState.folded;
-    final four = [Finger.index, Finger.middle, Finger.ring, Finger.pinky];
+    final four = [Finger.indexFinger, Finger.middle, Finger.ring, Finger.pinky];
     if (Finger.values.every(e)) return Gesture.openPalm;
     if (four.every(d)) {
       if (e(Finger.thumb)) return Gesture.thumbUp;
       return Gesture.fist; // pulgar doblado o indeterminado (suele quedar semi-oculto)
     }
-    if (e(Finger.index) && d(Finger.middle) && d(Finger.ring) && d(Finger.pinky)) {
+    if (e(Finger.indexFinger) && d(Finger.middle) && d(Finger.ring) && d(Finger.pinky)) {
       return Gesture.indexOnly;
     }
-    if (e(Finger.index) && e(Finger.middle) && d(Finger.ring) && d(Finger.pinky)) {
+    if (e(Finger.indexFinger) && e(Finger.middle) && d(Finger.ring) && d(Finger.pinky)) {
       return Gesture.peace;
     }
     return Gesture.none;
