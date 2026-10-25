@@ -3,14 +3,14 @@ import 'dart:math' as math;
 import '../core/models.dart';
 import '../core/settings.dart';
 
-enum Finger { thumb, index, middle, ring, pinky }
+enum Finger { thumb, indexFinger, middle, ring, pinky }
 
 enum FingerState { extended, folded, undetermined }
 
 extension FingerLabel on Finger {
   String get label => switch (this) {
         Finger.thumb => 'Pulgar',
-        Finger.index => 'Índice',
+        Finger.indexFinger => 'Índice',
         Finger.middle => 'Medio',
         Finger.ring => 'Anular',
         Finger.pinky => 'Meñique',
@@ -71,7 +71,7 @@ class FingerClassifier {
     }
     return {
       Finger.thumb: _thumb(p),
-      Finger.index: _finger(p, 5),
+      Finger.indexFinger: _finger(p, 5),
       Finger.middle: _finger(p, 9),
       Finger.ring: _finger(p, 13),
       Finger.pinky: _finger(p, 17),
