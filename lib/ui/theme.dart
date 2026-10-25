@@ -7,7 +7,7 @@ const kAccent = Color(0xFF38BDF8);
 
 const fingerColors = <Finger, Color>{
   Finger.thumb: Color(0xFFFB923C),
-  Finger.index: Color(0xFF4ADE80),
+  Finger.indexFinger: Color(0xFF4ADE80),
   Finger.middle: Color(0xFF38BDF8),
   Finger.ring: Color(0xFFC084FC),
   Finger.pinky: Color(0xFFF472B6),
