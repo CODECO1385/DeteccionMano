@@ -96,7 +96,7 @@ class _FingerRow extends StatelessWidget {
         child: Row(children: [
           Container(width: 10, height: 10, decoration: BoxDecoration(color: fingerColors[f], shape: BoxShape.circle)),
           const SizedBox(width: 8),
-          Expanded(child: Text('Dedo ${f.index + 1}: ${f.label}')),
+         Expanded(child: Text('Dedo ${Finger.values.indexOf(f) + 1}: ${f.label}')),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
             decoration: BoxDecoration(color: stateColor(s).withOpacity(0.2), borderRadius: BorderRadius.circular(8), border: Border.all(color: stateColor(s))),
